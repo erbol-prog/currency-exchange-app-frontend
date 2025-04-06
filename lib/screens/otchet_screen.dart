@@ -418,7 +418,7 @@ class _OtchetScreenState extends State<OtchetScreen> {
       return;
     }
 
-    String url = 'https://exchanger-erbolsk.pythonanywhere.com';
+    String url = 'http://localhost:8000';
     final encodedToken = Uri.encodeComponent(token);
 
     switch (_selectedExportType) {

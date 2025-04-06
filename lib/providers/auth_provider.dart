@@ -43,7 +43,7 @@ class AuthProvider with ChangeNotifier {
 
   Future<void> login(String username, String password) async {
     final url = Uri.parse(
-        'https://exchanger-erbolsk.pythonanywhere.com/api/token/'); 
+        'http://localhost:8000/api/token/'); 
     final headers = {'Content-Type': 'application/json'};
     final body = jsonEncode({'username': username, 'password': password});
 

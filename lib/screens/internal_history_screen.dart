@@ -57,7 +57,7 @@ class _InternalHistoryScreenState extends State<InternalHistoryScreen>
 
     final token = context.read<AuthProvider>().token;
     final url = Uri.parse(
-      'https://exchanger-erbolsk.pythonanywhere.com/api/internal-history/?page=$page',
+      'http://localhost:8000/api/internal-history/?page=$page',
     );
     final headers = {
       'Content-Type': 'application/json',
@@ -460,7 +460,7 @@ class _InternalHistoryScreenState extends State<InternalHistoryScreen>
 
     final opId = operation['id'];
     final url = Uri.parse(
-      'https://exchanger-erbolsk.pythonanywhere.com/api/operations/$opId/generate_receipt_inline/',
+      'http://localhost:8000/api/operations/$opId/generate_receipt_inline/',
     );
     final headers = {
       'Content-Type': 'application/json',

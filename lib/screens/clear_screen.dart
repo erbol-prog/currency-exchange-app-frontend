@@ -69,7 +69,7 @@ class _ClearShiftScreenState extends State<ClearShiftScreen>
 
       final response = await http.get(
         Uri.parse(
-            'https://exchanger-erbolsk.pythonanywhere.com/api/currencies/'),
+            'http://localhost:8000/api/currencies/'),
         headers: {
           'Authorization': 'Bearer $token',
           'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ class _ClearShiftScreenState extends State<ClearShiftScreen>
 
       final response = await http.post(
         Uri.parse(
-            'https://exchanger-erbolsk.pythonanywhere.com/api/shifts/clear/'),
+            'http://localhost:8000/api/shifts/clear/'),
         headers: {
           'Authorization': 'Bearer $token',
           'Content-Type': 'application/json',

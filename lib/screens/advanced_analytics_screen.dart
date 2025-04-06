@@ -116,7 +116,7 @@ class _AdvancedAnalyticsScreenState extends State<AdvancedAnalyticsScreen>
       }
 
       final url = Uri.parse(
-          'https://exchanger-erbolsk.pythonanywhere.com/api/analytics/advanced/?period=$_selectedPeriod');
+          'http://localhost:8000/api/analytics/advanced/?period=$_selectedPeriod');
 
       final response = await http.get(
         url,

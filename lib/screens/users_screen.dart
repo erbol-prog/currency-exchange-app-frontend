@@ -257,7 +257,7 @@ class _UsersScreenState extends State<UsersScreen>
     try {
       final token = context.read<AuthProvider>().token;
       final url =
-          Uri.parse('https://exchanger-erbolsk.pythonanywhere.com/api/users/');
+          Uri.parse('http://localhost:8000/api/users/');
       final headers = <String, String>{'Content-Type': 'application/json'};
       if (token != null && token.isNotEmpty) {
         headers['Authorization'] = 'Bearer $token';
@@ -433,7 +433,7 @@ class _UsersScreenState extends State<UsersScreen>
 
       final token = context.read<AuthProvider>().token;
       final url =
-          Uri.parse('https://exchanger-erbolsk.pythonanywhere.com/api/users/');
+          Uri.parse('http://localhost:8000/api/users/');
       final headers = <String, String>{'Content-Type': 'application/json'};
       if (token != null && token.isNotEmpty) {
         headers['Authorization'] = 'Bearer $token';
@@ -569,7 +569,7 @@ class _UsersScreenState extends State<UsersScreen>
 
       final token = context.read<AuthProvider>().token;
       final url = Uri.parse(
-          'https://exchanger-erbolsk.pythonanywhere.com/api/users/$userId/');
+          'http://localhost:8000/api/users/$userId/');
       final headers = <String, String>{'Content-Type': 'application/json'};
       if (token != null && token.isNotEmpty) {
         headers['Authorization'] = 'Bearer $token';
@@ -649,7 +649,7 @@ class _UsersScreenState extends State<UsersScreen>
 
       final token = context.read<AuthProvider>().token;
       final url = Uri.parse(
-          'https://exchanger-erbolsk.pythonanywhere.com/api/users/$userId/');
+          'http://localhost:8000/api/users/$userId/');
       final headers = <String, String>{'Content-Type': 'application/json'};
       if (token != null && token.isNotEmpty) {
         headers['Authorization'] = 'Bearer $token';

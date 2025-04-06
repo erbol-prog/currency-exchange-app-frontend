@@ -59,7 +59,7 @@ class _ShiftHistoryScreenState extends State<ShiftHistoryScreen>
 
     final token = context.read<AuthProvider>().token;
     final url = Uri.parse(
-        'https://exchanger-erbolsk.pythonanywhere.com/api/shifts/history/?page=$page');
+        'http://localhost:8000/api/shifts/history/?page=$page');
     final headers = {
       'Content-Type': 'application/json',
       if (token != null && token.isNotEmpty) 'Authorization': 'Bearer $token',
@@ -196,7 +196,7 @@ class _ShiftHistoryScreenState extends State<ShiftHistoryScreen>
     }
 
     final editUrl = Uri.parse(
-      'https://exchanger-erbolsk.pythonanywhere.com/api/shifts/$shiftId/edit/',
+      'http://localhost:8000/api/shifts/$shiftId/edit/',
     );
     final headers = {
       'Content-Type': 'application/json',

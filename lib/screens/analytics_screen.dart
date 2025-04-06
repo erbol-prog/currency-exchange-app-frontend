@@ -102,7 +102,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen>
       return;
     }
 
-    const String baseUrl = 'https://exchanger-erbolsk.pythonanywhere.com';
+    const String baseUrl = 'http://localhost:8000';
     const String endpoint = '/api/analytics/';
     final Uri uri = Uri.parse('$baseUrl$endpoint?period=$_selectedPeriod');
 

@@ -425,7 +425,7 @@ class _CassaScreenState extends State<CassaScreen>
     try {
       final token = context.read<AuthProvider>().token;
       final url = Uri.parse(
-          'https://exchanger-erbolsk.pythonanywhere.com/api/analytics/?period=$_selectedPeriod');
+          'http://localhost:8000/api/analytics/?period=$_selectedPeriod');
       final headers = {
         'Content-Type': 'application/json',
         if (token != null && token.isNotEmpty) 'Authorization': 'Bearer $token',

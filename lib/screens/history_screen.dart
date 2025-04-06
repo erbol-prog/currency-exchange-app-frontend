@@ -72,7 +72,7 @@ class _OperationsHistoryScreenState extends State<OperationsHistoryScreen>
 
     final token = context.read<AuthProvider>().token;
     final url = Uri.parse(
-      'https://exchanger-erbolsk.pythonanywhere.com/api/operations/?page=$page&period=$period',
+      'http://localhost:8000/api/operations/?page=$page&period=$period',
     );
     final headers = {
       'Content-Type': 'application/json',
@@ -230,7 +230,7 @@ class _OperationsHistoryScreenState extends State<OperationsHistoryScreen>
 
     final opId = operation['id'];
     final editUrl = Uri.parse(
-      'https://exchanger-erbolsk.pythonanywhere.com/api/operations/$opId/edit_operation/',
+      'http://localhost:8000/api/operations/$opId/edit_operation/',
     );
     final headers = {
       'Content-Type': 'application/json',
@@ -276,7 +276,7 @@ class _OperationsHistoryScreenState extends State<OperationsHistoryScreen>
 
     final opId = operation['id'];
     final url = Uri.parse(
-      'https://exchanger-erbolsk.pythonanywhere.com/api/operations/$opId/generate_receipt_inline/',
+      'http://localhost:8000/api/operations/$opId/generate_receipt_inline/',
     );
     final headers = {
       'Content-Type': 'application/json',

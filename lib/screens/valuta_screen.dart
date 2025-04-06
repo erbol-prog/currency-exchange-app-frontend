@@ -364,7 +364,7 @@ class _ValutaScreenState extends State<ValutaScreen>
     try {
       final token = context.read<AuthProvider>().token;
       final url = Uri.parse(
-          'https://exchanger-erbolsk.pythonanywhere.com/api/currencies/');
+          'http://localhost:8000/api/currencies/');
       final headers = {'Content-Type': 'application/json'};
       if (token != null && token.isNotEmpty) {
         headers['Authorization'] = 'Bearer $token';
@@ -427,7 +427,7 @@ class _ValutaScreenState extends State<ValutaScreen>
     try {
       final token = context.read<AuthProvider>().token;
       final url = Uri.parse(
-          'https://exchanger-erbolsk.pythonanywhere.com/api/currencies/');
+          'http://localhost:8000/api/currencies/');
       final headers = {'Content-Type': 'application/json'};
       if (token != null && token.isNotEmpty) {
         headers['Authorization'] = 'Bearer $token';
@@ -472,7 +472,7 @@ class _ValutaScreenState extends State<ValutaScreen>
     try {
       final token = context.read<AuthProvider>().token;
       final url = Uri.parse(
-          'https://exchanger-erbolsk.pythonanywhere.com/api/currencies/$id/');
+          'http://localhost:8000/api/currencies/$id/');
       final headers = {'Content-Type': 'application/json'};
       if (token != null && token.isNotEmpty) {
         headers['Authorization'] = 'Bearer $token';
